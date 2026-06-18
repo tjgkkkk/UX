@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Oswald:wght@200..700&family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap');
+
+@font-face {
+    font-family: 'freesentation05';
+    src: url(font/Freesentation-5Medium.ttf);
+}
+
+@font-face {
+    font-family: 'freesentation06';
+    src: url(font/Freesentation-6SemiBold.ttf);
+}
+
+@font-face {
+    font-family: 'freesentation07';
+    src: url(font/Freesentation-7Bold.ttf);
+}
+
+html, body {
+    width: 1194px;
+    height: 834px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+body {
+    background-image: url('img/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 90px;
+    transform: translateY(-50%);
+}
+
+/* 로고 */
+.logo img {
+    height: 320px;
+    width: auto;
+    display: block;
+    will-change: transform;
+}
+
+/* 오른쪽 영역 */
+.content {
+    margin-left: 70px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 제목 */
+.title {
+    font-size: 40px;
+    font-family: 'freesentation06';
+    color: black;
+    line-height: 1.2;
+}
+
+/* 서브텍스트 */
+.sub {
+    font-size: 26px;
+    color: #828282;
+    font-family: 'freesentation05';
+    margin-top: -20px;
+}
+
+/* 버튼 */
+.start {
+    margin-top: 10px;
+    width: 270px;
+    height: 75px;
+    background-color: #3092FF;
+    border: none;
+    border-radius: 53px;
+    font-size: 38px;
+    font-family: 'freesentation07';
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.start:hover {
+    transform: scale(1.05);
+    background-color: #1e7be6;
+}

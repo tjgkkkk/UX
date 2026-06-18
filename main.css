@@ -1,0 +1,612 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Oswald:wght@200..700&family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap');
+
+@font-face {font-family: 'freesentation01';
+src: url(font/Freesentation-1Thin.ttf);}
+
+@font-face {font-family: 'freesentation02';
+src: url(font/Freesentation-2ExtraLight.ttf);}
+
+@font-face {font-family: 'freesentation03';
+src: url(font/Freesentation-3Light.ttf);}
+
+@font-face {font-family: 'freesentation04';
+src: url(font/Freesentation-4Regular.ttf);}
+
+@font-face {font-family: 'freesentation05';
+src: url(font/Freesentation-5Medium.ttf);}
+
+@font-face {font-family: 'freesentation06';
+src: url(font/Freesentation-6SemiBold.ttf);}
+
+@font-face {font-family: 'freesentation07';
+src: url(font/Freesentation-7Bold.ttf);}
+
+@font-face {font-family: 'freesentation08';
+src: url(font/Freesentation-8ExtraBold.ttf);}
+
+@font-face {font-family: 'freesentation09';
+src: url(font/Freesentation-9Black.ttf);}
+
+
+
+
+         html, body {
+        width: 1194px;
+        height: 834px;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+         }
+
+        body {
+            background-image: url('img/background.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: relative;
+        }
+
+        /* [요구사항 0] 1194x834 크기 고정 및 메인 레이아웃 구성 */
+        .screen-container {
+            width: 1194px;
+    height: 834px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 25px;
+    box-sizing: border-box;
+        }
+
+        /* ========================================================
+           LNEFT NAVIGATION BAR (네비게이션 바) 
+        ======================================================== */
+        .main-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* 양 끝단 배치로 전체 너비 마감 */
+    width: 100%;
+    height: 709px; /* 전체 834px - 패딩60px - 헤더45px - 마진20px = 딱 들어맞는 높이 */
+    box-sizing: border-box;
+}
+
+        .nav-bar {
+           width: 76px;
+    height: 100%; /* 부모 .main-body 높이 709px을 그대로 상속 */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* 상단 메뉴팩과 하단 프로필팩을 양 끝으로 분리 */
+    align-items: center;
+    box-sizing: border-box;
+}
+        .nav-item01 img{
+            width: 30px;
+            height: 30px;
+        }
+        .nav-item02 img{
+            width: 29px;
+            height: 26px;
+        }
+        .nav-item03 img{
+            width: 32px;
+            height: 32px;
+        }
+        .nav-item04 img{
+            width: 23px;
+            height: 29px;
+        }
+
+        /* 상단 4개 아이콘을 감싸는 화이트 필 팩 */
+
+        .nav-bar-top{
+            display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* 화이트 메뉴 팩과 빨간 SOS 버튼 사이 간격 */
+    width: 100%;
+        }
+
+        .nav-menu-group {
+            background-color: #ffffff;
+            border-radius: 40px;
+            width: 76px;
+            padding: 25px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 24px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .nav-indicator {
+            position: absolute;
+            width: 46px;
+            height: 46px;
+
+            background-color: #3092FF;
+            border-radius: 50%;
+
+            left: 50%;
+            transform: translateX(-50%);
+            
+            top: 25px;
+            z-index: 1;
+            transition: top 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .nav-item01, .nav-item02, .nav-item03, .nav-item04 {
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            color: #555555;
+            position: relative;
+            z-index: 2;
+        }
+
+        .nav-menu-group img {
+            transition: 
+            transform 0.65 ease,
+            opacity 0.65s ease;
+        }
+        
+
+       
+
+        
+
+        /* [요구사항 3] 빨간색 긴급 버튼 */
+        .btn-emergency {
+            width: 70px;
+            height: 70px;
+            background-color: #FF4D4D;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            cursor: pointer;
+            box-shadow: 0 6px 16px rgba(255, 77, 77, 0.35);
+            transition: transform 0.2s;
+            border: none;
+            margin-top: 30%;
+        }
+        .btn-emergency:hover { transform: scale(1.05); }
+         
+        .nav-footer1 img {
+            width: 29px;
+            height: 27px;
+        }
+        
+        .nav-footer1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .nav-bar-row {
+            background-color: #E8F3FF;
+            border-radius: 40px;
+            width: 76px;
+            flex-direction: column;
+            align-items: center;
+            padding: 3px 0;
+            gap: 24px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+        }
+        .btn-logout , .profil {
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+
+        .btn-logout img{
+            width: 31px;
+            height: 31px;
+            padding-bottom: 15%;
+            padding-top: 30%;
+            cursor: pointer;
+        }
+        .profil img{
+            width: 66px;
+            height: 66px;
+
+        }
+
+        /* ========================================================
+           MAIN CONTENT AREA (우측 대시보드 공간)
+        ======================================================== */
+        
+
+        /* 상단 헤더 라인 */
+        .header-line {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            height: 45px;
+            width: 100%; 
+            box-sizing: border-box;
+
+        }
+        .brand-logo {
+            font-size: 30px;
+            font-weight: 800;
+            color: #3092FF;
+            letter-spacing: 0.5px;
+            font-family: 'Alata';
+        }
+        /* [요구사항 4] 환자 환영 인사 문구 */
+        .welcome-text {
+            font-size: 30px;
+            font-weight: bold;
+            color: #111111;
+            margin-right: auto;
+            margin-left: 45px;
+            font-family: 'freesentation07';
+        }
+        .welcome-text span {  color: #3092FF; font-family: 'freesentation07'; }
+        
+        .time-badge {
+            background-color: #E8F3FF;
+            color: #3092FF;
+            padding: 5px 34px;
+            border-radius: 50px;
+            font-size: 30px;
+            font-family: 'Alata';
+            text-align: center;
+        }
+        
+        /* 대시보드 내부 그리드 판넬 구조 */
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: 590px 420px;
+            gap: 20px;
+            height: 100%;
+        }
+
+        /* 공통 카드 스타일 */
+        .card {
+            background-color: #ffffff;
+            border-radius: 13px;
+           
+            box-shadow: 0 0 5.3px rgba(0, 0, 0, 0.1);
+        }
+
+        /* 상단 좌측: 대형 메인 안내 배너 */
+        .banner-card {
+            display: flex;
+            align-items: center;
+            
+            
+            width: 568px;
+            height: 302px;
+        }
+    
+        .banner-left {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
+
+        .banner-left img {
+            width: 223px;
+            height: 223px;
+            left: 60%;
+            position: relative;
+            
+        }
+        .banner-right {
+            text-align: center;
+            position: relative;
+            left: 30%;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            top: 3%;
+        }
+
+        .banner-right img {
+            width: 20px;
+            height: 29px;
+        }
+        /* [요구사항 5] 메인 카드 동적 이름 적용 */
+        .banner-title {
+            font-size: 21px;
+            font-family: 'freesentation07';
+            color: #111111;
+            line-height: 1.4;
+        }
+        /* [요구사항 6] 나비와 대화하기 버튼 */
+       
+        
+        
+        .btn-chat {
+            background-color: #3484F5;
+            color: white;
+            border: none;
+            padding: 13px 26px;
+            border-radius: 50px;
+            font-size: 19px;
+            font-weight: bold;
+            font-family: 'freesentation05';
+            cursor: pointer;
+            align-self: flex-start;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 4px 12px rgba(52, 132, 245, 0.2);
+            left: 5.5%;
+            position: relative;
+            transition: 0.3s;
+        }
+
+        .btn-chat:hover {
+            transform: scale(1.05);
+            background-color: #1e7be6;
+        }
+
+        
+
+        /* 상단 우측: 캘린더 컴포넌트 */
+        .calendar-card {
+            background-color: #3484F5;
+            color: white;
+        }
+        .cal-header {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+        .cal-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            text-align: center;
+            row-gap: 8px;
+            font-size: 13px;
+        }
+        .cal-day-label { font-weight: bold; opacity: 0.9; margin-bottom: 4px; }
+        .cal-date {
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        /* 특수 일정 마킹 원형 데코 */
+        .cal-date.marked-blue::after {
+            content: ''; position: absolute; width: 22px; height: 22px;
+            border: 2px solid white; border-radius: 50%; z-index: 1;
+        }
+        .cal-date.marked-white::after {
+            content: ''; position: absolute; width: 22px; height: 22px;
+            background-color: white; border-radius: 50%; z-index: 1;
+        }
+        .cal-date.marked-white span { color: #3484F5; position: relative; z-index: 2; font-weight: bold;}
+        .cal-footer {
+            display: flex; gap: 15px; margin-top: 15px; font-size: 11px; opacity: 0.9;
+        }
+
+        /* 하단 좌측 계층 구조 (일정 정보 + 건강 요약 데이터스택) */
+        .left-bottom-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        /* 타임라인 바 리스트 */
+        .timeline-card {
+            display: flex;
+            flex-direction: column;
+            width: 420px;
+            height: 98px;
+            box-sizing: border-box;
+        }
+        .timeline{
+            display: flex;
+            align-items: center;
+            border-radius: 10px;
+            padding: 9px 12px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .type-a {
+            padding-bottom: 5px;
+        }
+        .type-b {
+            padding-top: 5px;
+        }
+
+        .time-stamp {
+           width: 40px;
+            height: 15px;
+            border-radius: 50px;
+            border: 1px solid #E0E0E0;
+            font-family: 'freesentation07';
+            font-size: 11px;
+            color: #555555;
+            padding: 5px 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .timeline1::before {
+            content: '';
+            position: absolute;
+            left: 0px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 6px;
+            height: 32px;
+            background-color: #9ECCFF;
+            border-radius: 999px;
+        }
+        .timeline1 {
+            width: 300px;
+            position: relative;
+            left: 2%;
+            padding: 8px 10px 8px 15px;
+            background: rgb(110 179 255 / 15%);
+            border-radius: 7px;
+            font-family: 'freesentation04';
+            font-size: 14px;
+        }
+
+         .timeline2::before {
+            content: '';
+            position: absolute;
+            left: 0px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 6px;
+            height: 36px;
+            background-color: #61ACFF;
+            border-radius: 999px;
+        }
+        .timeline2 {
+            width: 300px;
+            position: relative;
+            left: 2%;
+            padding: 10px 10px 10px 15px;
+            background: rgb(97 172 255 / 50%);
+            border-radius: 7px;
+            font-family: 'freesentation04';
+            font-size: 14px;
+        }
+
+       
+
+        /* 건강 정보 위젯 */
+        .health-card { 
+            display: flex; 
+            flex-direction: column; 
+            gap: 15px;
+            width: 420px;
+            height: 172px; 
+            box-sizing: border-box;
+            padding: 12px;
+            justify-content: space-around;
+        }
+
+        .card-sec-title {
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            font-family: 'freesentation07';
+            font-size: 18px; 
+            color: #111;
+        }
+
+        .card-sec-title img {
+            width: 11px;
+            height: 16px;
+        }
+        .btn-more {
+            background-color: #3484F5; 
+            border: none; 
+            padding: 5px 9px;
+            border-radius: 16px; 
+            font-size: 12px; 
+            color: #ffffff; 
+            font-weight: bold; 
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+        .health-widgets-flex {
+            display: flex;
+            gap: 15px; 
+        }
+        .h-widget {
+            flex: 1;
+            background-color: #EDF5FF;
+            border-radius: 13px;
+            padding: 16px;
+        }
+
+        .h-widget-title { 
+           font-size: 15px;
+            color: #000000;
+            margin-bottom: 3px;
+            font-family: 'freesentation04';
+        }
+
+        .h-widget-val { 
+            font-size: 14px; 
+            font-family: 'freesentation04';
+            color: #111; 
+            margin-bottom: 17px;}
+        
+        /* 게이지 진행 바 */
+        .progress-bar-bg {
+            width: 100%; 
+            height: 15px; 
+            background: #ffffff; 
+            border-radius: 13px; 
+            overflow: hidden; 
+            box-shadow: 0 0 5px rgba(48, 146, 255, 0.5);
+        }
+
+        .progress-bar-fill { 
+            position: relative;
+            left: 30%;
+            width: 45%;
+            height: 100%;
+            border-radius: 10px;
+            background: linear-gradient(90deg, #B7D9FF 0%, #6EB3FF 100%);
+        }
+        
+        /* 도넛 형태 수면 지표 시각화 크기 조정 */
+        .donut-container {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background:
+                conic-gradient(
+                    #9CC6FF 0deg 290deg,
+                    #ffffff 290deg 360deg
+                );
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            float: right;
+            margin-top: -53px;
+            box-shadow: 0 0 5px rgba(48, 146, 255, 0.5);
+        }
+        .donut-inner { 
+            width: 38px; 
+            height: 38px; 
+            background: #edf5ff; 
+            border-radius: 50%; 
+            box-shadow: inset 0 0 5px rgba(48, 146, 255, 0.5);
+        }
+
+      
+
+        /* 하단 우측: 식단 메뉴 관리 컴포넌트 */
+        .diet-card { display: flex; flex-direction: column; }
+        .diet-table-cols {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 15px; flex: 1;
+        }
+        .diet-column {
+            background-color: #ffffff; border: 1px solid #E4EBF4; border-radius: 16px;
+            display: flex; flex-direction: column; align-items: center; padding: 15px 10px;
+        }
+        .diet-col-header {
+            background-color: #EBF3FC; color: #3484F5; font-weight: bold; font-size: 14px;
+            padding: 6px 24px; border-radius: 12px; margin-bottom: 15px;
+        }
+        .diet-menu-list {
+            font-size: 13px; color: #4A4A4A; text-align: center; line-height: 2.1; font-weight: 500;
+        }
+

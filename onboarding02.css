@@ -1,0 +1,235 @@
+@font-face {
+    font-family: 'freesentation04';
+    src: url(font/Freesentation-4Regular.ttf);
+}
+
+
+@font-face {
+   font-family: 'freesentation05';
+    src: url(font/Freesentation-5Medium.ttf);
+}
+
+@font-face {
+    font-family: 'freesentation06';
+    src: url(font/Freesentation-6SemiBold.ttf);
+}
+
+@font-face {
+    font-family: 'freesentation07';
+    src: url(font/Freesentation-7Bold.ttf);
+}
+
+
+
+* {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* 1. 화면 사이즈 1194x834 고정 */
+        .screen-container {
+            width: 1194px;
+            height: 834px;
+            background-color: #F9FCFF;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            padding: 60px 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .title {
+            font-family: 'freesentation07';
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 35px;
+            color: #111111;
+            text-align: center;
+        }
+
+        /* 사진 속 테이블 디자인 재현 */
+    .info-table {
+    width: 1060px;
+
+    border-collapse: separate;
+    border-spacing: 0;
+
+    border-radius: 18px;
+    overflow: hidden;
+
+    background: #ffffff;
+
+    font-family: 'freesentation04';
+    font-size: 16px;
+    margin-bottom: 40px;
+
+    /* 외곽선 대신 그림자로 카드 느낌 */
+    box-shadow:
+        0 0 0 1px #8C8C8C,
+        0 4px 14px rgba(201, 201, 201, 0.4);
+}
+
+/* 셀 */
+.info-table td {
+    padding: 12px 16px;
+    vertical-align: middle;
+    color: #333333;
+
+    /* 선 두께 통일 */
+    border-right: 1px solid #8C8C8C;
+    border-bottom: 1px solid #8C8C8C;
+}
+
+/* 마지막 열 */
+.info-table td:last-child {
+    border-right: none;
+}
+
+/* 마지막 행 */
+.info-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* 라벨 셀 */
+.info-table td.label {
+    background-color: #E8F1FC;
+    font-weight: 900;
+    text-align: center;
+    width: 110px;
+    color: #4A4A4A;
+}
+
+/* 값 셀 */
+.info-table td.value {
+    background-color: #ffffff;
+    text-align: left;
+}
+
+/* 섹션 헤더 */
+.info-table td.section-header {
+    background-color: #D4E6F7;
+    font-weight: bold;
+    text-align: center;
+    font-size: 17px;
+    color: #222222;
+    padding: 12px;
+}
+
+        
+        /* 회색/블루톤 라벨 셀 스타일 */
+        .info-table td.label {
+            background-color: #E8F1FC;
+            font-weight: bold;
+            text-align: center;
+            width: 110px;
+            color: #4A4A4A;
+        }
+
+        /* 데이터가 들어가는 흰색 셀 스타일 */
+        .info-table td.value {
+            background-color: #ffffff;
+            text-align: left;
+        }
+
+        /* 중간 '입원 상태' 섹션 헤더 스타일 */
+        .info-table td.section-header {
+            background-color: #D4E6F7;
+            font-weight: bold;
+            text-align: center;
+            font-size: 17px;
+            color: #222222;
+            padding: 10px;
+        }
+
+        input[type="text"] {
+            width: 130px;
+            padding: 3px 10px;
+            border: none;
+            font-size: 14px;
+        }
+
+        /* 체크박스 및 라디오 버튼 공통 스타일 (사진 속 파란색 체크 스타일 반영) */
+        input[type="checkbox"], input[type="radio"] {
+            accent-color: #4A90E2;
+            width: 17px;
+            height: 17px;
+            vertical-align: middle;
+            margin-right: 5px;
+            cursor: pointer;
+        }
+
+        .checkbox-group {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .sub-group {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            margin-left: 5px;
+            color: #666;
+        }
+
+        .blank-line {
+            display: inline-block;
+            width: 80px;
+            border-bottom: 1px solid #7F7F7F;
+            margin-left: 5px;
+            height: 15px;
+        }
+
+        /* 하단 버튼 스타일 */
+        .button-group {
+            display: flex;
+            gap: 25px;
+            margin-top: auto; /* 화면 하단에 배치 */
+            margin-bottom: 20px;
+        }
+
+        button {
+            width: 250px;
+            height: 72px;
+
+            background-color: #3092ff;
+
+            border: none;
+            border-radius: 53px;
+
+            font-size: 30px;
+            font-family: 'freesentation06';
+            
+            box-shadow: 0 4px 12px rgba(34, 137, 255, 0.5);
+
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        
+        .btn-back{
+            background-color: #c1c1c1;
+            box-shadow: 0 4px 12px rgba(105, 105, 105, 0.3);
+        }
+
+         .btn-next:hover {
+            transform: scale(1.05);
+            background-color: #1e7be6;
+        }
+
+            .btn-back:hover {
+                transform: scale(1.05);
+                background-color: #a5a5a5;
+            }
+    
+        

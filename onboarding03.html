@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="onboarding03.css">
+
+  <script src="libraries/p5.min.js"></script>
+  <script src="libraries/p5.sound.min.js"></script>
+</head>
+<body>
+    <div class="screen-container">
+        <h1 class="title">나비의 성격을 골라주세요.</h1>
+
+        <div class="grid-container">
+            <div class="personality-box" data-type="polite">
+                <div class="box-title">공손하고 정중한 비서</div>
+                <div class="box-desc">오늘은 온화한 날씨입니다.<br>편안한 하루 보내시길 바랍니다.</div>
+            </div>
+
+            <div class="personality-box" data-type="friend">
+                <div class="box-title">친구같은 비서</div>
+                <div class="box-desc">오늘 날씨 진짜 괜찮다!<br>산책하기 딱 좋아~</div>
+            </div>
+
+            <div class="personality-box" data-type="active">
+                <div class="box-title">활발하고 긍정적인 비서</div>
+                <div class="box-desc">오늘 날씨 꽤 완벽한데요?<br>왠지 좋은 일 생길 것 같은 느낌!</div>
+            </div>
+
+            <div class="personality-box" data-type="warm">
+                <div class="box-title">따뜻하고 다정한 비서</div>
+                <div class="box-desc">오늘은 공기도 부드럽고 햇살도 포근한 하루예요.<br>너무 무리하지 말고 천천히 보내요 :)</div>
+            </div>
+        </div>
+
+        <button class="btn-complete" id="completeBtn" disabled>완료</button>
+    </div>
+    <script src="onboarding03.js"></script>
+</body>
+</html>

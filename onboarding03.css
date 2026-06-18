@@ -1,0 +1,115 @@
+* {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #e9ecef; /* 화면 외부 배경 */
+        }
+
+        /* 1. 화면 사이즈 1194x834 고정 */
+        .screen-container {
+            width: 1194px;
+            height: 834px;
+            background-color: #F9FCFF;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            padding: 40px;
+        }
+
+        .title {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 60px;
+            color: #111111;
+        }
+
+        /* 2x2 그리드 레이아웃 */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            width: 800px;
+            margin-bottom: 70px;
+        }
+
+        /* 각 성격 박스 디자인 */
+        .personality-box {
+            background-color: #ffffff;
+            border: 2px solid #cbe1fd;
+            border-radius: 30px;
+            padding: 40px 30px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease; /* 애니메이션 효과 */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 200px;
+            box-shadow: 0 0 10px rgba(48, 146, 255, 0.4);
+        }
+
+        /* 3. hover 효과: 배경색이 살짝 변하고 테두리가 진해짐 */
+        .personality-box:hover {
+            background-color: #F5F9FF;
+            border-color: #b2d6ff;
+            transform: translateY(-5px); /* 살짝 떠오르는 효과 */
+        }
+
+        /* 선택되었을 때의 스타일 */
+        .personality-box.selected {
+            background-color: #EEF5FC;
+            border-color: #b2d6ff;
+            box-shadow: 0 4px 15px rgba(74, 144, 226, 0.2);
+        }
+
+        .box-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #111111;
+            margin-bottom: 15px;
+        }
+
+        .box-desc {
+            font-size: 16px;
+            color: #4A4A4A;
+            line-height: 1.5;
+        }
+
+        /* 완료 버튼 스타일 */
+        .btn-complete {
+            background-color: #3092ff;
+            color: white;
+            border: none;
+            padding: 18px 100px;
+            font-size: 28px;
+            font-weight: bold;
+            border-radius: 40px;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3);
+            transition: 0.3s;
+        }
+
+        
+
+        .btn-complete:hover {
+            transform: scale(1.05);
+            background-color: #1e7be6;
+        }
+
+        .btn-complete:disabled {
+            background-color: #BCBCBC;
+            cursor: not-allowed;
+            box-shadow: none;
+        }
